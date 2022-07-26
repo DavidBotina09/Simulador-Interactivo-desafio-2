@@ -3,16 +3,33 @@ let valorBoleta = 5000
 let clientes = 0
 let edad = 0
 let hora = 0
+let pelicula 
 
-/*const seisMedia = (horaEntrada) => horaPelicula = 6.30
-const sieteMedia = (horaEntrada) => horaPelicula = 7.30
-const nueveMedia = (horaEntrada) => horaPelicula = 9.30*/
-
-function horaEntrada(seisMedia){
-    seisMedia = 6.30
+function cartelera(pelis){
+    switch(pelis){
+        case "thor":
+            pelicula = "Thor"
+            break
+        case "telefono negro":
+            pelicula = "Telefono Negro"
+            break
+        case "minions":
+            pelicula = "Los Minions"
+            break
+        default:
+            alert("no ingreses peliculas que no estan en cartelera")
+            break
+    }
 }
 
+
+
 do{
+    do{
+        pelicula = prompt("estan estas tres peliculas en cartelera 1. Thor 2. telefono negro 3. minions").toLowerCase()
+        cartelera(pelicula)
+        console.log(pelicula)
+    }while(pelicula > 0 )
     do{
         horaPelicula = prompt("Hola cliente tenemos estos horarios de peliculas para usted, 6:30, 7:30, 9:30")
         switch(horaPelicula){
@@ -62,7 +79,7 @@ do{
     
 }while((edad < 17) || (isNaN(edad)))
 
-alert(`su funcion de las ${hora} ha sido reservada, el total a pagar es ${valorBoleta * clientes}`)
+alert(`su funcion de ${pelicula} a las ${hora} ha sido reservada, el total a pagar es ${valorBoleta * clientes}`)
 
 
 
